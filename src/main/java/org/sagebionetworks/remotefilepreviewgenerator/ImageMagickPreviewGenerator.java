@@ -1,16 +1,21 @@
 package org.sagebionetworks.remotefilepreviewgenerator;
 
+import com.google.inject.Inject;
+import com.google.inject.Singleton;
+
 import java.io.File;
 
+@Singleton
 public class ImageMagickPreviewGenerator implements ExternalPreviewGenerator {
 	
-	private ImageMagickProvider provider;
+	private final ImageMagickExecutable provider;
 	
-	public void setImageMagickProvider(ImageMagickProvider provider) {
+	@Inject
+	public ImageMagickPreviewGenerator(ImageMagickExecutable provider) {
 		this.provider = provider;
 	}
 	
-	public ImageMagickProvider getImageMagickProvider() {
+	public ImageMagickExecutable getImageMagickProvider() {
 		return this.provider;
 	}
 

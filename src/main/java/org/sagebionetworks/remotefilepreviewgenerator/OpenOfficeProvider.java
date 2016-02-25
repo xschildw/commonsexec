@@ -1,6 +1,6 @@
 package org.sagebionetworks.remotefilepreviewgenerator;
 
-class OpenOfficeProvider implements ExternalPreviewProvider {
+class OpenOfficeProvider implements ExternalExecutable {
 
 	@Override
 	public boolean isInstalled() {
@@ -8,7 +8,7 @@ class OpenOfficeProvider implements ExternalPreviewProvider {
 	}
 
 	@Override
-	public boolean isRunning() {
+	public boolean isBusy() {
 		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 	}
 
@@ -18,7 +18,7 @@ class OpenOfficeProvider implements ExternalPreviewProvider {
 	}
 
 	@Override
-	public void kill() {
+	public void stop() {
 		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 	}
 	

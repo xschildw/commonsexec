@@ -1,6 +1,9 @@
 package org.sagebionetworks.remotefilepreviewgenerator;
 
-public class ImageMagickProvider implements ExternalPreviewProvider {
+import com.google.inject.Singleton;
+
+@Singleton
+public class ImageMagickExecutable implements ExternalExecutable {
 	
 	private String execPath;
 	
@@ -18,7 +21,7 @@ public class ImageMagickProvider implements ExternalPreviewProvider {
 	}
 
 	@Override
-	public boolean isRunning() {
+	public boolean isBusy() {
 		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 	}
 
@@ -28,7 +31,7 @@ public class ImageMagickProvider implements ExternalPreviewProvider {
 	}
 
 	@Override
-	public void kill() {
+	public void stop() {
 		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 	}
 	
