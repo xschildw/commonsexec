@@ -5,6 +5,7 @@ package org.sagebionetworks.remotefilepreviewgenerator;
  */
 public interface ExternalExecutable {
 	
+	public String getExecPath();
 	public boolean isInstalled();
 	public boolean isBusy();
 	public void start();
