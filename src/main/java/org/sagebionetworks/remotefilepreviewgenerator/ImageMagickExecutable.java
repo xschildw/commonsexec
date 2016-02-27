@@ -8,8 +8,7 @@ public class ImageMagickExecutable implements ExternalExecutable {
 	
 	private String execPath;
 	private boolean busy;
-	
-	
+
 	@Inject
 	public ImageMagickExecutable(Configuration configuration) {
 		this.execPath = configuration.getImageMagickPath();
